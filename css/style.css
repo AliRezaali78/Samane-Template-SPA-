@@ -1,0 +1,344 @@
+* {
+  --bg-dark1-color: #011f26;
+  --bg-dark2-color: #024059;
+  --bg-info-color: #0578a6;
+  --bg-primary-color: #023e73;
+  --bg-secondary-color: #8fadbf;
+}
+#background {
+  height: 100vh;
+  background-color: var(--bg-secondary-color);
+}
+#logo {
+  text-shadow: 0px 0px 1rem rgb(255, 255, 255);
+}
+#login-form {
+  background-color: #ffff;
+}
+#login-form input:focus {
+  box-shadow: 0px 0px 1rem rgba(60, 182, 212, 0.9) !important;
+}
+/* Main Page */
+#main-area {
+  direction: rtl;
+}
+/* Nav bar */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  left: 0;
+  z-index: 1030;
+}
+.navbar-brand{
+  margin: 0 !important;
+  padding: 10px 0 !important;
+}
+#main-nav {
+  padding: 5px 20px;
+  height: 50px;
+  width: calc(100% - 250px);
+}
+#main-nav a {
+  color: var(--bg-secondary-color);
+  text-decoration: none;
+}
+#main-nav a.active {
+  color: #fff;
+  text-decoration: none;
+}
+#main-nav .nav-item {
+  padding: 0px 10px;
+}
+.navRight {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(5, 96, 133);
+}
+#bigBar.bar-icon {
+  color: #ffff !important;
+  padding: 12px 0;
+  transition: all ease-in-out 0.5s;
+}
+#bigBar.bar-icon:hover {
+  color: var(--bg-secondary-color) !important;
+  cursor: pointer;
+}
+#bigBar.bar-icon.clicked{
+  transform: rotate(+180deg);
+  color: var(--bg-secondary-color) !important;
+}
+#bigBar.bar-icon.clicked:hover{
+  color: #ffff !important;
+}
+
+/*  */
+#smallBar .bar-icon {
+  color: var(--bg-secondary-color) !important;
+  padding: 12px 0;
+  transition: all ease-in-out 0.5s;
+}
+#smallBar .bar-icon:hover {
+  color: #ffff !important;
+  cursor: pointer;
+}
+#smallBar .bar-icon.clicked{
+  transform: rotate(+180deg);
+  color: #ffff !important;
+}
+#smallBar .bar-icon.clicked:hover{
+  color: var(--bg-secondary-color)  !important;
+}
+/* CreatedBy */
+.createdBy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  position: fixed; 
+  box-shadow: 10px 5px 2rem #024059;
+  border-top: 1px solid #024059;
+  right: 0;
+  bottom: 0;
+  color: var(--bg-secondary-color);
+  width: 250px;
+  height: 10vh;
+  background-color: var(--bg-dark1-color);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  width: 250px;
+  height: calc((100vh - 50px ) - 10vh);
+  background-color: var(--bg-dark1-color);
+  overflow-y: auto;
+  direction: ltr;
+}
+/* width */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: #024059;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #0578a2;
+}
+.profile {
+  padding: 10px 10px;
+  direction: rtl;
+}
+.profile img {
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+}
+.profile h6 {
+  font-size: 90%;
+}
+.profile .searchInput {
+  position: relative;
+}
+button#search {
+  position: absolute;
+  bottom: 2px;
+  color: #8fadbf;
+  left: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+.profile input {
+  background-color: var(--bg-dark2-color);
+  color: #ffff;
+  border-radius: 2px;
+  border: 0;
+  outline: 0;
+  height: 32px;
+}
+
+.sidebar-button {
+  position: relative;
+  background-color: var(--bg-dark1-color);
+  color: #fff;
+  border: 0;
+  outline: 0 !important;
+  width: 100%;
+  height: 45px;
+  text-align: right;
+  direction: rtl;
+  transition: all ease-in-out 0.1s;
+  overflow: hidden;
+}
+.sidebar-button:hover {
+  background-color: rgb(1, 23, 30) !important;
+  border-left: 3.5px solid var(--bg-info-color) !important;
+}
+
+.btn-effect {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgb(5, 120, 166,0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+  animation: effectAnimate 1s ease-out;
+}
+@keyframes effectAnimate {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.sidebar-dropdown {
+  background-color: var(--bg-dark1-color);
+  color: #fff;
+  border: 0;
+  outline: 0 !important;
+  width: 100%;
+  height: 45px;
+  text-align: right;
+  direction: rtl;
+  transition: all ease-in-out 0.1s;
+}
+.sidebar-button.list-button {
+  background-color: var(--bg-dark1-color);
+}
+.sidebar-menu {
+  background-color: #122c37;
+  padding: 10px;
+}
+
+.btn-active {
+  border-left: 3.5px solid var(--bg-info-color) !important;
+  background-color: rgb(1, 23, 30) !important;
+}
+/* Main Area */
+.banner {
+  padding: 15px 15px;
+  margin-right: 250px;
+  margin-top: 50px;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  text-align: right;
+}
+/* Content Area */
+.content-area {
+  padding: 70px 15px 50px 15px;
+  margin-right: 250px;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Ultilities */
+
+.btn-warning2 {
+  background-color: rgb(255, 132, 4);
+  color: #fff;
+}
+.btn-warning2:hover {
+  opacity: 0.9;
+  color: #e1e1e1;
+}
+.btn-primary2 {
+  background-color: rgb(36, 127, 212);
+  color: #fff;
+}
+.btn-primary2:hover {
+  color: #e1e1e1;
+  opacity: 0.9;
+}
+
+.bg-dark {
+  background-color: var(--bg-dark1-color) !important;
+  color: #8fadbf !important;
+}
+.bg-dark2 {
+  background-color: var(--bg-dark1-color) !important;
+  color: #8fadbf !important;
+}
+.bg-info {
+  background-color: var(--bg-info-color) !important;
+  color: #ffff !important;
+}
+.ar {
+  text-align: right;
+}
+
+@media screen AND (min-width:768px){
+  .sidebar{
+    display: block !important;
+  }
+}
+@media screen AND (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .nav-item {
+    margin-right: 15px;
+  }
+  .card input,
+  .card select {
+    width: 50% !important;
+  }
+
+}
+
+@media screen AND (max-width: 767px){
+  #main-nav{
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-wrapper{
+    right: 0 !important;
+  }
+  .sidebar{
+    right: 0 !important;
+    width: 100%;
+    height: auto;
+  }
+  .profile{
+    display: none !important;
+  }
+  .createdBy{
+    display: none;
+    right: 0 !important;
+  }
+  #smallBar{
+    display: block !important;
+  }
+  .content-area{
+    margin-right: 0 !important;
+  }
+}
