@@ -1,34 +1,35 @@
-let root="http://127.0.0.1:5500";
-$(function(){
+let rootFile = "";
+let root = 'http://' + window.location.host + '/' + rootFile;
+$(function () {
     checkIfLoggedIn();
     setTexts();
     // $(window).on("beforeunload", function() { 
     //     checkIfLoggedIn(); 
     // })
-    $('#logout').click(function(event){
+    $('#logout').click(function (event) {
         logout(event);
     });
 });
 
-function checkIfLoggedIn(){
+function checkIfLoggedIn() {
     // Call server for checking
-    if(!cookies.get('login')){
+    if (!cookies.get('login')) {
         cookies.del(true);
-        window.location.replace(root+'/index.html');
+        window.location.replace(root + '/index.html');
     }
 }
 
-function setTexts(){
+function setTexts() {
     let user = cookies.get('user');
     $('#username').text(user.name + " " + user.fname);
     $('#role').text(user.role);
 }
 
 
-function logout(e){
+function logout(e) {
     e.preventDefault();
     cookies.del(true);
-    window.location.replace(root+'/index.html');
+    window.location.replace(root + '/index.html');
 }
 
 function getBaseUrl() {
