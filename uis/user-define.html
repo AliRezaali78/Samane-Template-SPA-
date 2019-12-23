@@ -1,3 +1,21 @@
-<p>
-    user define
+<p id="user">
+    Test
 </p>
+<script>
+    $(function () {
+        if (isEditForm('edituser'))
+            $('p#user').text('Edit User ' + getParamValue('edituser'));
+        else
+            $('p#user').text('Add New User');
+
+
+        function isEditForm(editParam) {
+            editParam = editParam.toLowerCase();
+            let loc = window.location.href;
+            let index = loc.indexOf(editParam);
+            if (index >= 0)
+                return true
+            return false;
+        }
+    });
+</script>
